@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import ToDoItem from '../ToDoItem';
+import ToDoItemContainer from '../../Container/ToDoItemContainer';
 
 class ToDoGroup extends Component {
     render() {
         return (
             <ul>
                 {this.props.todos.map((todo) => (
-                    <ToDoItem key={todo.id} todo={todo}/>
+                    <ToDoItemContainer key={todo.id} todo={todo}/>
                 ))}
             </ul>
         );
