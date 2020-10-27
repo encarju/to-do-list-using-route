@@ -14,10 +14,10 @@ class ToDoItem extends Component {
     render() {
     
         return (
-            <div>
-                <span onClick={this.onMarkAsDone} className={this.props.todo.done ? "true" : "false"}>{this.props.todo.text}</span>
+            <li  onClick={this.onMarkAsDone} className={this.props.todo.done ? "true" : "false"}>
+                <span>{this.props.todo.text}</span>
                 <button onClick={this.onRemoveItem}>X</button>
-            </div>
+            </li>
         );
     }
 }

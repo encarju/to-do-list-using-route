@@ -8,9 +8,9 @@ class ToDoGroup extends Component {
             <ToDoItemContainer key={todo.id} todo={todo}/>
         ));
         return (
-            <div>
+            <ul className="striped-list">
                 {todos}
-            </div>
+            </ul>
         );
     }
 }

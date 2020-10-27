@@ -5,3 +5,7 @@
 .false{
  text-decoration: none;
 }
+
+button{
+    float: right;
+}
