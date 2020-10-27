@@ -3,11 +3,6 @@ import './index.css'
 
 
 class ToDoItem extends Component {
-    constructor(props) {
-        super(props);
-    }
-    
-
     onMarkAsDone = () =>{
         this.props.revertStatus(this.props.todo.id);
     
