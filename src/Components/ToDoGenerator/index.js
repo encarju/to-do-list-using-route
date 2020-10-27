@@ -8,7 +8,7 @@ class ToDoGenerator extends Component {
         const text = event.target.toDoText.value;
         const id = uuidv4();
         const todo = { text, done: false, id }
-        console.log(todo);
+        this.props.addToDo(todo);
     }
     render() {
         return (
