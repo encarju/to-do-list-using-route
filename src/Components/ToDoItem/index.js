@@ -3,10 +3,10 @@ import './index.css'
 
 class ToDoItem extends Component {
     render() {
-        const { text, done, id } = this.props.todo;
+    
         return (
             <li>
-                <span className={done ? "true" : "false"}>{text}</span>
+                <span className={this.props.todo.done ? "true" : "false"}>{this.props.todo.text}</span>
                 <button>x</button>
             </li>
         );
