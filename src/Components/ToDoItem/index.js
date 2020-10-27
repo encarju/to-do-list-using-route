@@ -5,7 +5,6 @@ import './index.css'
 class ToDoItem extends Component {
     onMarkAsDone = () =>{
         this.props.revertStatus(this.props.todo.id);
-    
     }
 
     onRemoveItem = () =>{

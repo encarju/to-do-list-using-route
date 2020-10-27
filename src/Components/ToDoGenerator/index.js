@@ -10,6 +10,7 @@ class ToDoGenerator extends Component {
         const todo = { text, done: false, id }
         this.props.addToDo(todo);
     }
+
     render() {
         return (
             <div>
@@ -17,7 +18,6 @@ class ToDoGenerator extends Component {
                     <input type="text" name="toDoText" id="toDoText" />
                     <input type="submit" value="Add Todo Item"/>
                 </form>
-
             </div>
         );
     }
