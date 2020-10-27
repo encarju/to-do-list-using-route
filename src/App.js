@@ -1,5 +1,6 @@
 import './App.css';
 import ToDoGroup from './Components/ToDoGroup';
+import ToDoList from './Components/ToDoList';
 
 function App() {
   const todos = [{id: '123', text:'Test', done: false},
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ToDoGroup todos={todos}/>
+        <ToDoList/>
       </header>
     </div>
   );
