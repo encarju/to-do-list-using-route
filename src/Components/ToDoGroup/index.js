@@ -5,8 +5,8 @@ class ToDoGroup extends Component {
     render() {
         return (
             <ul>
-                {this.props.todo.map((value) => (
-                    <ToDoItem todo={value}/>
+                {this.props.todos.map((todo) => (
+                    <ToDoItem key={todo.id} todo={todo}/>
                 ))}
             </ul>
         );

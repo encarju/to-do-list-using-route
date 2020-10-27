@@ -1,15 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import ToDoItem from './Components/ToDoItem/';
 import ToDoGroup from './Components/ToDoGroup';
 
 function App() {
-  const todo = [{id: '123', text:'Test', done: false},
+  const todos = [{id: '123', text:'Test', done: false},
                 {id: '124', text:'Test2', done: true}];
   return (
     <div className="App">
       <header className="App-header">
-        <ToDoGroup todo={todo}/>
+        <ToDoGroup todos={todos}/>
       </header>
     </div>
   );
