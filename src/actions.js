@@ -5,3 +5,7 @@ export const addToDo = (todo) => {
 export const revertStatus = (id) => {
     return { type: "REVERT_STATUS", payload: id }
 }
+
+export const deleteToDo = (id) => {
+    return { type: "DELETE_TO_DO", payload: id }
+}

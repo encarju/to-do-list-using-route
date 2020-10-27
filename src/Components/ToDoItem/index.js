@@ -13,13 +13,17 @@ class ToDoItem extends Component {
     
     }
 
+    onRemoveItem = () =>{
+        this.props.deleteToDo(this.props.todo.id);
+    }
+
     render() {
     
         return (
-            <li>
+            <div>
                 <span onClick={this.onMarkAsDone} className={this.props.todo.done ? "true" : "false"}>{this.props.todo.text}</span>
-                <button>x</button>
-            </li>
+                <button onClick={this.onRemoveItem}>X</button>
+            </div>
         );
     }
 }
