@@ -13,7 +13,6 @@ class App extends Component {
   componentDidMount() {
     getTodos().then(
       response => {
-        console.log(response)
         this.props.initTodos(response.data)
       }
     )

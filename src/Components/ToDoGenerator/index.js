@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './index.css'
+import { addTodo } from '../../api/todos';
 
 class ToDoGenerator extends Component {
 
@@ -10,12 +11,13 @@ class ToDoGenerator extends Component {
         if (text === "" || text === null) {
             alert("To-Do item must be filled out");
             return false;
-        }
-        const id = uuidv4();
-        const todo = { text, done: false, id }
-        this.props.addToDo(todo);
+        }  
+        addTodo(text).then(response => {           
+            this.props.addToDo(response.data);
+            event.target.toDoText.value = "";  
+        })
         
-        event.target.toDoText.value = "";
+        
     }
 
     render() {
