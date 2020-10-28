@@ -12,3 +12,7 @@ export const deleteToDo = (id) =>{
     return api.delete(`/api/todos/${id}`)
 }
 
+export const updateToDo = (id,todoStatus)  =>{
+    return api.put(`/api/todos/${id}`, {done: !todoStatus})
+}
+

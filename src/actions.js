@@ -13,3 +13,4 @@ export const deleteToDo = (id) => {
 export const initTodos = todos => {
     return {type : "INIT_TO_DO", payload: todos}
 }
+
