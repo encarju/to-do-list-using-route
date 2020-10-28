@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css'
 import { deleteToDo, updateToDo } from '../../api/todos';
+import {List} from 'antd'
 
 class ToDoItem extends Component {
     onMarkAsDone = () => {
@@ -20,10 +21,12 @@ class ToDoItem extends Component {
     render() {
 
         return (
-            <li onClick={this.onMarkAsDone} className={this.props.todo.done ? "true" : "false"}>
-                <span>{this.props.todo.text}</span>
+            <div className="todoitem">
+            <List.Item >
+                <span onClick={this.onMarkAsDone} id="todo" className={this.props.todo.done ? "true" : "false"} >{this.props.todo.text}</span>
                 <button onClick={this.onRemoveItem}>X</button>
-            </li>
+            </List.Item>
+            </div>
         );
     }
 }

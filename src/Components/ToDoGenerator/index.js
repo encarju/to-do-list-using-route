@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './index.css'
 import { addTodo } from '../../api/todos';
+import { Button } from 'antd';
 
 class ToDoGenerator extends Component {
 
@@ -23,8 +24,10 @@ class ToDoGenerator extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
+                <section>
                 <input type="text" name="toDoText" id="toDoText" placeholder="Input new to-do here..."/>
                 <input type="submit" value="Add"/>
+                </section>
             </form>
         );
     }

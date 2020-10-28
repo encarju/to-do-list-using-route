@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -54,4 +54,20 @@ li{
 Link{
   color: white;
   text-decoration: none;
+} */
+
+
+.site-layout-background{
+background-color: rgb(22, 58, 99);
+}
+  .logo {
+    height: 250px;
+    align-content: center;
+    background-image: url("C:\Users\reyesva\to-do-list-using-route\src\image\logo4.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+.sider{
+  background-color: oldlace;
 }
