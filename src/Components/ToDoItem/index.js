@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css'
-
+import { deleteToDo } from '../../api/todos';
 
 class ToDoItem extends Component {
     onMarkAsDone = () =>{
@@ -8,7 +8,10 @@ class ToDoItem extends Component {
     }
 
     onRemoveItem = () =>{
-        this.props.deleteToDo(this.props.todo.id);
+        deleteToDo(this.props.todo.id).then(response => {
+            this.props.deleteToDo(response.data.id);
+        })
+        
     }
 
     render() {

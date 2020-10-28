@@ -17,6 +17,14 @@ class App extends Component {
       }
     )
   }
+
+  componentWillMount() {
+    getTodos().then(
+      response => {
+        this.props.initTodos(response.data)
+      }
+    )
+  }
   
   render() {
     return (
