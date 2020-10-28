@@ -1,11 +1,13 @@
 import './App.css';
 import React, { Component } from 'react';
 import ToDoList from './Components/ToDoList';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import DoneListContainer from "./Container/DoneListContainer"
 import { getTodos } from './api/todos';
 import {connect} from 'react-redux';
-import {initTodos} from './actions'
+import {initTodos} from './actions';
+import NotFound from './Components/NotFound'
+
 
 
 class App extends Component {
@@ -40,10 +42,11 @@ class App extends Component {
                 <Link to="/done" >Go to Done Page</Link>
                 </li>
               </ul>
-  
-              <Route exact path="/" component={ToDoList} />
+              <Switch>
               <Route path="/done" component={DoneListContainer} />
-  
+              <Route exact path="/" component={ToDoList} />
+              <Route path="*" component={NotFound}/>
+              </Switch>
             </BrowserRouter>
           {/* </React.Fragment> */}
         </header>
