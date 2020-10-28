@@ -1,7 +1,10 @@
 import { combineReducers } from "redux";
 
 const todos = (state = [], action) => {
-    if (action.type === "ADD_TO_DO") {
+    if(action.type === "INIT_TO_DO"){
+        console.log(action)
+        return action.payload;
+    }else if (action.type === "ADD_TO_DO") {
         return [...state, action.payload];
     }
     else if (action.type === "REVERT_STATUS") {
