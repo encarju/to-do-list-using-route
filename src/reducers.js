@@ -9,7 +9,7 @@ const todos = (state = [], action) => {
     }
     else if (action.type === "REVERT_STATUS") {
         return state.map(todo =>
-            todo.id === action.payload ? { ...todo, done: !todo.done }
+            todo.id === action.payload ? { ...todo, done: !todo.done, text: todo.text }
                 : todo);
     } else if (action.type === "DELETE_TO_DO") {
         const todos = state.filter(todo => todo.id !== action.payload);

@@ -5,7 +5,7 @@ import {List} from 'antd'
 
 class ToDoItem extends Component {
     onMarkAsDone = () => {
-        updateToDo(this.props.todo.id, this.props.todo.done).then(response => {
+        updateToDo(this.props.todo).then(response => {
             this.props.revertStatus(response.data.id);
         })
 
@@ -13,7 +13,7 @@ class ToDoItem extends Component {
 
     onRemoveItem = () => {
         deleteToDo(this.props.todo.id).then(response => {
-            this.props.deleteToDo(response.data.id);
+            this.props.deleteToDo(this.props.todo.id);
         })
 
     }
