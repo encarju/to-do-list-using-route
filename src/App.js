@@ -10,10 +10,8 @@ import NotFound from './Components/NotFound'
 import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
+  CheckOutlined,
+  UnorderedListOutlined,
   UserOutlined
 } from '@ant-design/icons';
 import { Avatar } from 'antd';
@@ -51,7 +49,6 @@ class App extends Component {
 
     const { Header, Content, Footer, Sider } = Layout;
     const { collapsed } = this.state;
-    const { SubMenu } = Menu;
 
     return (
       <Layout className="Layout" style={{ minHeight: '100vh' }}>
@@ -61,10 +58,10 @@ class App extends Component {
             <div className="logo" />
 
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-              <Menu.Item key="1" icon={<PieChartOutlined />}>
+              <Menu.Item key="1" icon={<UnorderedListOutlined />}>
                 <Link to="/" >Go to List Page</Link>
               </Menu.Item>
-              <Menu.Item key="2" icon={<DesktopOutlined />}>
+              <Menu.Item key="2" icon={<CheckOutlined />}>
                 <Link to="/done" >Go to Done Page</Link>
               </Menu.Item>
             </Menu>
@@ -91,32 +88,6 @@ class App extends Component {
           </Layout>
         </BrowserRouter>
       </Layout>
-
-
-      // <div className="App">
-      //   <header className="App-header">
-      //     {/* <React.Fragment> */}
-      //       <BrowserRouter>
-      //         <ul>
-      //           <li>
-      //             <Link to="/" >Go to List Page</Link>
-      //           </li>
-      //           <li>
-      //           <Link to="/done" >Go to Done Page</Link>
-      //           </li>
-      //         </ul>
-      //         <Switch>
-      //         <Route path="/done" component={DoneListContainer} />
-      //         <Route exact path="/" component={ToDoList} />
-      //         <Route path="*" component={NotFound}/>
-      //         </Switch>
-      //       </BrowserRouter>
-      //     {/* </React.Fragment> */}
-      //   </header>
-      // </div>
-
-
-
     );
   }
 }

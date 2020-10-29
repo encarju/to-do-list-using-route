@@ -7,15 +7,20 @@
 }
 
 button{
+    background-color: #1890ff;
+    color: white;
     float: right;
+    cursor: grab;
+    border: none;
+    padding: 10px 15px;
 }
 
-#todo{
+/* #todo{
 
     font-family: cursive;
     font-style: oblique;
     color: oldlace;
-}
+} */
 
 /* width */
 .todo-group::-webkit-scrollbar {

@@ -1,73 +1,42 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-li{
-    background-color: #818181;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    size: 90%;
-    font-size: 100%;
-    list-style-type: none;
-
-}
-
-Link{
-  color: white;
-  text-decoration: none;
-} */
-
-
 .site-layout-background{
-background-color: rgb(22, 58, 99);
+background-color: white;
 }
   .logo {
     height: 250px;
     align-content: center;
-    background-image: url("C:\Users\reyesva\to-do-list-using-route\src\image\logo4.png");
+    background-image: url("image/logo4.png");
     background-repeat: no-repeat;
     background-size: auto;
   }
 
 .sider{
   background-color: oldlace;
+}
+
+li.ant-list-item{
+  color: black;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid black;
+  padding: 6px;
+  margin: 0px;
+}
+
+ul.striped-list{
+  padding: 0px;
+}
+
+li.ant-list-item:hover{
+  background-color: #1890ff;
+  color: white;
+  text-align: center;
+}
+
+h1{
+  color: white;
+}
+
+.ant-layout-header.site-layout-background {
+  background-color: #002140;
+  
 }
