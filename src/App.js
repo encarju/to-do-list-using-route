@@ -53,7 +53,7 @@ class App extends Component {
     return (
       <Layout className="Layout" style={{ minHeight: '100vh' }}>
         <BrowserRouter>
-          <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse} className="sider">
+          <Sider>
 
             <div className="logo" />
 

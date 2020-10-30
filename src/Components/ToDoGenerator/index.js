@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import './index.css'
 import { addTodo } from '../../api/todos';
-import { Button } from 'antd';
+import { Input, Form, Button} from 'antd';
 
 class ToDoGenerator extends Component {
+    formRef = React.createRef();
 
-    onSubmit = (event) => {
-        event.preventDefault();
-        const text = event.target.toDoText.value;
-        if (text === "" || text === null) {
-            alert("To-Do item must be filled out");
-            return false;
-        }  
-        addTodo(text).then(response => {           
+    onSubmit = (value) => {
+        const text = value.text;
+        addTodo(text).then(response => {
             this.props.addToDo(response.data);
-            event.target.toDoText.value = "";  
+            this.formRef.current.resetFields();
         })
-        
-        
+
+
     }
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <div>
+            <Form onFinish={this.onSubmit} ref={this.formRef}>
                 <section>
-                <input type="text" name="toDoText" id="toDoText" placeholder="Input new to-do here..."/>
-                <input type="submit" value="Add"/>
+                    <Form.Item name="text" rules={[{ required: true, message: 'Please input to-do entry.' }]}>
+                        <Input placeholder="Input new to-do here..." />
+                    </Form.Item>
+                    <Form.Item>
+                        <Button type="primary" block htmlType="submit">Add</Button>
+                    </Form.Item>
                 </section>
-            </form>
+            </Form>
+            </div>
         );
     }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './index.css'
 import { deleteToDo, updateToDo } from '../../api/todos';
-import {List} from 'antd'
+import { Button, List, Popconfirm } from 'antd';
+import { DeleteOutlined } from '@ant-design/icons';
+import "./index.css"
 
 class ToDoItem extends Component {
     onMarkAsDone = () => {
@@ -22,10 +23,11 @@ class ToDoItem extends Component {
 
         return (
             <div className="todoitem">
-            <List.Item >
-                <span onClick={this.onMarkAsDone} id="todo" className={this.props.todo.done ? "true" : "false"} >{this.props.todo.text}</span>
-                <button onClick={this.onRemoveItem}>X</button>
-            </List.Item>
+                <List.Item >
+                    <span onClick={this.onMarkAsDone} id="todo" className={this.props.todo.done ? "true" : "false"} >{this.props.todo.text}</span>
+                    <Button onClick={this.onRemoveItem} icon={<DeleteOutlined />} />
+
+                </List.Item>
             </div>
         );
     }
